@@ -1,0 +1,54 @@
+---
+import Header from "./Header.astro";
+---
+
+<header class="relative min-h-screen overflow-hidden bg-vert text-cream">
+  <img
+    src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=2200&q=85"
+    alt="Route de campagne dans le Limousin"
+    class="absolute inset-0 h-full w-full object-cover opacity-55"
+  />
+  <div class="absolute inset-0 bg-gradient-to-b from-vert-fonce/35 via-vert-moyen/45 to-vert-fonce/80"></div>
+
+  <Header />
+
+  <div
+    class="relative z-10 mx-auto flex min-h-[calc(100vh-92px)] max-w-7xl flex-col justify-end px-5 pb-14 pt-20 sm:pb-20 sm:px-8 lg:px-12"
+  >
+    <div class="max-w-4xl">
+      <div class="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.17em] text-blanc-ocre">
+        <span class="h-px w-9 bg-ocre-clair"></span>
+        Une série sonore en Limousin
+      </div>
+      <h1 class="max-w-4xl text-5xl leading-[0.94] tracking-tight sm:text-7xl lg:text-8xl font-serif">
+        Les Pommes<br />du Coin
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg font-normal leading-relaxed text-cream/90 sm:text-xl">
+        2 jours à vélo, 80 km, trois femmes qui font vivre le Limousin.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-5">
+        <a
+          href="#"
+          class="inline-flex items-center gap-3 bg-ocre px-6 py-4 text-sm font-medium text-white transition hover:bg-ocre-fonce"
+        >
+          <span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/45">
+            <iconify-icon icon="solar:play-linear" width="15" stroke-width="1.5"></iconify-icon>
+          </span>
+          Écouter la série
+        </a>
+        <span class="text-xs uppercase tracking-[0.14em] text-cream/70">3 épisodes · 2024</span>
+      </div>
+    </div>
+
+    <div class="mt-16 flex items-center justify-between border-t border-white/20 pt-5 text-xs text-cream/70">
+      <span>Du Buis à Bellac</span>
+      <a
+        href="#contexte"
+        class="flex items-center gap-2 uppercase tracking-[0.15em] transition hover:text-white"
+      >
+        Descendre
+        <iconify-icon icon="solar:arrow-down-linear" width="16" stroke-width="1.5"></iconify-icon>
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,49 @@
+---
+import EpisodeCard from "./EpisodeCard.astro";
+---
+
+<section id="episodes" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28 lg:px-12">
+  <div
+    class="mb-12 flex flex-col justify-between gap-6 border-b border-granit/15 pb-8 md:flex-row md:items-end"
+  >
+    <div>
+      <p class="text-xs font-medium uppercase tracking-[0.16em] text-ocre">Les rencontres</p>
+      <h2 class="mt-4 text-4xl tracking-tight sm:text-5xl font-serif">Trois voix du coin</h2>
+    </div>
+    <p class="max-w-sm text-sm leading-relaxed text-gris">
+      Des conversations sans décor, enregistrées là où les choses se font et se racontent.
+    </p>
+  </div>
+
+  <EpisodeCard
+    numero="E01"
+    lieu="Bellac"
+    badge="Avec Marie"
+    titre="Faire lien, ensemble"
+    description="À Bellac, Marie raconte les rencontres qui comptent, les idées partagées autour d'une table et l'énergie discrète de l'action collective. Une conversation sur le lien social comme manière de faire territoire."
+    imageSrc="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=85"
+    imageAlt="Portrait de Marie"
+    bordered
+  />
+
+  <EpisodeCard
+    numero="E02"
+    lieu="Compreignac"
+    badge="Avec Mathilde"
+    titre="Cultiver ce qui vient"
+    description="Mathilde fait pousser des fleurs comestibles à Compreignac. Elle parle de saisons qui bougent, de sols à écouter et de cette adaptation climatique qui se joue, chaque jour, dans les gestes du jardin."
+    imageSrc="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=700&q=85"
+    imageAlt="Fleurs dans un jardin"
+    bordered
+  />
+
+  <EpisodeCard
+    numero="E03"
+    lieu="Bellac"
+    badge="Avec Solène et Adam"
+    titre="Entreprendre à sa façon"
+    description="Solène et Adam ont choisi Bellac pour imaginer leur projet. Ils parlent d'entreprendre en rural, de créer sans s'isoler et des valeurs très concrètes qui donnent du sens à leur manière de travailler."
+    placeholderIcon="solar:buildings-2-linear"
+    placeholderLabel="Une conversation à Bellac"
+  />
+</section>

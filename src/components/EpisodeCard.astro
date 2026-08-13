@@ -1,0 +1,53 @@
+---
+interface Props {
+  numero: string;
+  lieu: string;
+  badge: string;
+  titre: string;
+  description: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  placeholderIcon?: string;
+  placeholderLabel?: string;
+  bordered?: boolean;
+}
+const { numero, lieu, badge, titre, description, imageSrc, imageAlt, placeholderIcon, placeholderLabel, bordered } =
+  Astro.props;
+---
+<article class={`grid grid-cols-1 py-10 md:grid-cols-12 md:gap-8 ${bordered ? "border-b border-granit/15" : ""}`}>
+  <div class="mb-6 flex items-start justify-between md:col-span-2 md:mb-0 md:block">
+    <span class="text-sm text-ocre font-mono">{numero}</span>
+    <span class="text-xs uppercase tracking-[0.14em] text-gris-clair">{lieu}</span>
+  </div>
+
+  {imageSrc ? (
+    <div class="overflow-hidden md:col-span-3">
+      <img src={imageSrc} alt={imageAlt} class="h-64 w-full object-cover grayscale-[15%]" />
+    </div>
+  ) : (
+    <div class="flex h-64 items-center justify-center bg-beige-moyen md:col-span-3">
+      <div class="text-center">
+        <iconify-icon icon={placeholderIcon || "solar:buildings-2-linear"} width="42" stroke-width="1.5" class="text-vert"></iconify-icon>
+        <p class="mt-3 text-xs uppercase tracking-[0.15em] text-gris">{placeholderLabel || "À venir"}</p>
+      </div>
+    </div>
+  )}
+
+  <div class="mt-6 md:col-span-5 md:mt-0">
+    <p class="text-xs font-medium uppercase tracking-[0.15em] text-vert">{badge}</p>
+    <h3 class="mt-2 text-3xl tracking-tight sm:text-4xl font-serif">{titre}</h3>
+    <p class="mt-4 max-w-xl text-base leading-relaxed text-gris">{description}</p>
+  </div>
+
+  <div class="mt-6 flex items-end md:col-span-2 md:mt-0 md:justify-end">
+    <a
+      href="#"
+      class="inline-flex items-center gap-2 text-sm font-medium text-vert transition hover:text-ocre"
+    >
+      Écouter
+      <span class="flex h-9 w-9 items-center justify-center rounded-full border border-vert">
+        <iconify-icon icon="solar:play-linear" width="16" stroke-width="1.5"></iconify-icon>
+      </span>
+    </a>
+  </div>
+</article>
