@@ -3,4 +3,5 @@ dist/
 .env
 .env.*
 .DS_Store
-*.local.astro/
+*.local
+.astro/
